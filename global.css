@@ -1,0 +1,161 @@
+html {
+  box-sizing: border-box;
+  color: hsl(30, 10%, 34%);
+  font-size: 16px;
+  font-family: "Outfit", sans-serif;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  background-color: hsl(30, 54%, 90%);
+}
+
+img {
+  display: block;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    margin: 0;
+  }
+}
+
+hr {
+  border-top: 1px solid hsl(30, 18%, 87%);
+}
+
+li {
+  margin: 10px 0;
+  padding-left: 14px;
+}
+
+/* RECIPE IMAGE */
+
+.recipe-image {
+  img {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+.recipe-image-mobile {
+  img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .recipe-image-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .recipe-image {
+    display: none;
+  }
+}
+
+/* CARD */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 800px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    padding: 36px;
+    border-radius: 0;
+  }
+}
+
+.title {
+  font-size: 40px;
+  color: hsl(24, 5%, 18%);
+  font-family: "Young Serif", "Serif";
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+}
+
+/* DISCLAIMER */
+
+.disclaimer {
+  padding: 24px;
+  border-radius: 14px;
+  background-color: hsl(330, 100%, 98%);
+
+  li::marker {
+    color: hsl(332, 51%, 32%);
+  }
+}
+
+.disclaimer-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: hsl(332, 51%, 32%);
+}
+
+/* SECTION */
+
+.section {
+  li::marker {
+    color: hsl(14, 45%, 36%);
+  }
+  ol > li::marker {
+    font-weight: 700;
+  }
+}
+
+.section-title {
+  font-size: 32px;
+  color: hsl(14, 45%, 36%);
+  font-family: "Young Serif", "Serif";
+  margin-bottom: 16px;
+}
+
+/* NUTRITION */
+
+.nutritional-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 16px;
+
+  > div {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    padding: 12px 32px;
+
+    &:nth-child(even) {
+      color: hsl(14, 45%, 36%);
+      font-weight: 700;
+    }
+
+    &:nth-last-child(-n + 2) {
+      border-bottom: none;
+    }
+  }
+}
